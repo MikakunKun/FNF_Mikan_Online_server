@@ -287,7 +287,7 @@ export class GameRoom extends Room<RoomState> {
   }
 
   async latestVersion():Promise<String> {
-    let res = await fetch('https://raw.githubusercontent.com/Snirozu/Funkin-Psych-Online/main/gitVersion.txt');
+    let res = await fetch('https://raw.githubusercontent.com/MikakunKun/FNF_Mikan_Online_client/main/gitVersion.txt');
     let data = await res.text();
     return (data + "").split('\n')[0].trim(); 
   }

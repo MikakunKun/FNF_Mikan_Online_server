@@ -18,9 +18,9 @@
   "author": "",
   "license": "Apache-2.0-NON-AI",
   "bugs": {
-    "url": "https://github.com/MikakunKun/Mikan_Engine_online_server/issues"
+    "url": "https://github.com/MikakunKun/FNF_Mikan_Online_server/issues"
   },
-  "homepage": "https://github.com/MikakunKun/Mikan_Engine_online_server#readme",
+  "homepage": "https://github.com/MikakunKun/FNF_Mikan_Online_server#readme",
   "devDependencies": {
     "@colyseus/loadtest": "^0.15.0",
     "@colyseus/testing": "^0.15.0",
