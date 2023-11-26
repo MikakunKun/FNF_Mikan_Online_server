@@ -52,7 +52,7 @@ export default config({
         });
 
         app.get("*", (req, res) => {
-            res.redirect("https://github.com/Snirozu/Funkin-Online-Server");
+            res.redirect("https://github.com/MikakunKun/Mikan_Engine_online_server");
         });
 
         /**
