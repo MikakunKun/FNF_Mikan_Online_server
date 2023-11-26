@@ -1,12 +1,78 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+<!DOCTYPE html>
+<html lang="ja">
+<body class='main' onload='onload();'>
+    <head>
+        <title>fnf-character</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/png" href="./favicon.png">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/anim.css">
+        <script type="text/javascript" src="backend/ClientPrefs.js"></script>
+        <script type="text/javascript" src="backend/Song.js"></script>
+        <script type="text/javascript" src="backend/Rating.js"></script>
 
-    body {
-        background-color: #271f33;
-        color: aliceblue;
-        font-size: 30px;
-        margin: 30px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-</style>
+        <script type="text/javascript" src="object/Note.js"></script>
+        <script type="text/javascript" src="object/StrumNote.js"></script>
+        <script type="text/javascript" src="object/HealthBar.js"></script>
+        
+        <script type="text/javascript" src="song/brain-rot-alt/chart.js"></script>
+
+        <script type="text/javascript" src="song/best-girl/chart.js"></script>
+        <script type="text/javascript" src="song/rush-hour/chart.js"></script>
+
+        <script type="text/javascript" src="song/arrest/chart.js"></script>
+        
+        <script type="text/javascript" src="song/w00f/chart.js"></script>
+        
+        <script type="text/javascript" src="song/new-state/chart-mania.js"></script>
+
+        <script type="text/javascript" src="object/Character.js"></script>
+
+        <script type="text/javascript" src="js/characters/boyfriend.js"></script>
+        <script type="text/javascript" src="js/characters/puro.js"></script>
+
+        <script type="text/javascript" src="js/frameRate.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+        <script type="text/javascript" src="js/opponent.js"></script>
+        <script type="text/javascript" src="js/function.js"></script>
+    </head>
+    <div id='search'>
+        <h2 class='azuki_font' style='position:fixed; font-size:20px; top:-17.3px;' id="frameRate">FPS : null</h2>
+        <h2 class='azuki_font' style='position:fixed; font-size:20px; left:100px; top:-17.3px;' id="timer">| 0:00</h2>
+        <button class='azuki_font' style='position:fixed; font-weight:bold; padding:0; font-size:16.5px; height:17.5px; top:0px;' onclick='startTheSong();'>Start</button>
+    </div>
+    <section id='camHUD'>
+        <div class='_opponent'>
+            <img id='opponentStrums0' class='strums opponent_strum' src='note/Strums/arrow/arrowLEFT0000.png'>
+            <img id='opponentStrums1' class='strums opponent_strum' src='note/Strums//arrow/arrowDOWN0000.png'>
+            <img id='opponentStrums2' class='strums opponent_strum' src='note/Strums//arrow/arrowUP0000.png'>
+            <img id='opponentStrums3' class='strums opponent_strum' src='note/Strums//arrow/arrowRIGHT0000.png'>
+        </div>
+        <div class='_player'>
+            <img id='playerStrums0' class='strums player_strums' src='note/Strums//arrow/arrowLEFT0000.png'>
+            <img id='playerStrums1' class='strums player_strums' src='note/Strums//arrow/arrowDOWN0000.png'>
+            <img id='playerStrums2' class='strums player_strums' src='note/Strums//arrow/arrowUP0000.png'>
+            <img id='playerStrums3' class='strums player_strums' src='note/Strums//arrow/arrowRIGHT0000.png'>
+        </div>
+        <div class="_healthBar" id="healthBarBG">
+            <img src="sprites/healthBarAnim/healthmove0000.png" alt="Health Bar Background" class="health-bar-img">
+            <div class="healthBar_LEFT" id="_healthBar"></div>
+            <div class="healthBar_RIGHT" id="healthBar"></div>
+        </div>    
+        <text id='scoreTxt' class='scoreTxt'>Score :0 | Misses :0</text>
+    </section>
+    <section id='camGame'>
+        <div id='other'>
+        </div>
+        <img id='opponent' class='opponent' src='anim/new-puro/idle/puro idle0000.png'>
+        <img id='player' class='player' src='anim/boyfriend/idle/BF idle dance0000.png'>
+        <div id='stage'>
+            <img id='stageback' class='back' src='bg/week1/stageback.png'>
+            <img id='stagefront' class='front' src='bg/week1/stagefront.png'>
+            <img id='stagecurtains' class='curtain' src='bg/week1/stagecurtains.png'>
+        </div>
+    </section>
+
+    <div id='notes'>
+    </div>
+</body>
